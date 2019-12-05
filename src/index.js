@@ -1,5 +1,5 @@
-import {setupHeader, setupMain, setupFooter} from './dom'
+import {setupHeader, setupMain, setupFooter} from './dom';
 
-setupHeader();
-setupMain();
-setupFooter();
+Promise.all([setupHeader(),setupMain(),setupFooter()])
+  .then(result => console.log(result))
+  .catch(error => console.log(`Error in executing ${error}`));
