@@ -1,3 +1,10 @@
-.main-header {
+.main-header{
   background: yellowgreen;
+}
+.input-section{
+  display: flex;
+  justify-content: center;
+}
+.weather-section{
+  background:  rgba(63, 144, 219, 0.5);
 }
