@@ -1,5 +1,5 @@
 .main-header{
-  background: yellowgreen;
+  color: rgb(85, 85, 231);
 }
 .input-section{
   display: flex;
@@ -7,4 +7,47 @@
 }
 .weather-section{
   background:  rgba(63, 144, 219, 0.5);
+  max-width: 30rem;
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto;
+  border-radius: 10%;
+}
+.loading-icon{
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto;
+}
+.max-temp,
+.min-temp{
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+.min-temp{
+  justify-content: flex-start;
+}
+.max-temp{
+  justify-content: flex-end;
+}
+.main-temp{
+  font-size: 8rem;
+  display: flex;
+  justify-content: center;
+}
+
+.humidity,
+.pressure,
+.desc-temp{
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.desc-temp{
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
 }
