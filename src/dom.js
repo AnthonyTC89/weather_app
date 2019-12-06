@@ -31,18 +31,18 @@ function showWeather(w) {
   const wImg = `http://openweathermap.org/img/wn/${wIcon}@2x.png`;
   const humidity = `${w.main.humidity} %`;
   const pressure = `${w.main.pressure} hPa`;
-  const tempC = Math.round(parseFloat(w.main.temp) - 273.15);
-  const tempMaxC = Math.round(parseFloat(w.main.temp_max) - 273.15);
-  const tempMinC = Math.round(parseFloat(w.main.temp_min) - 273.15);
+  // const tempC = Math.round(parseFloat(w.main.temp) - 273.15);
+  // const tempMaxC = Math.round(parseFloat(w.main.temp_max) - 273.15);
+  // const tempMinC = Math.round(parseFloat(w.main.temp_min) - 273.15);
 
   // const celcius = Math.round(parseFloat(w.main.temp)-273.15);
   // const fahrenheit = Math.round(((parseFloat(w.main.temp)-273.15)*1.8)+32);
 
   const weatherSection = document.querySelector('#weather-section');
   weatherSection.innerHTML = `
-    <div class="min-temp col-3">min: ${tempMinC}°C</div>
-    <div class="main-temp col-6">${tempC}°C</div>
-    <div class="max-temp col-3">max: ${tempMaxC}°C</div>
+    <div class="min-temp col-3">min: ${w.main.temp}°C</div>
+    <div class="main-temp col-6">${w.main.temp}°C</div>
+    <div class="max-temp col-3">max: ${w.main.temp}°C</div>
     <div class="desc-temp col-12">${wDesc}</div>
     <div class="humidity col-4">Humidity: ${humidity}</div>
     <picture class="image col-4">
