@@ -18,4 +18,4 @@ const getWeatherInfo = async (city) => {
   return res.status;
 };
 
-export { getWeatherInfo as default };
+export default getWeatherInfo;

@@ -1,5 +1,6 @@
 /* eslint-disable linebreak-style */
-import { getWeatherInfo } from './weather';
+/* eslint-disable arrow-body-style */
+import getWeatherInfo from './weather';
 
 function showMessage(msg) {
   // eslint-disable-next-line no-alert
@@ -13,7 +14,9 @@ function showLoading() {
 
 async function timeout(ms) {
   showLoading();
-  await new Promise((resolve) => setTimeout(resolve, ms));
+  await new Promise((resolve) => {
+    return setTimeout(resolve, ms);
+  });
 }
 
 function hiddenLoading() {
