@@ -3,16 +3,17 @@
   "version": "1.0.0",
   "description": "A weather forecast site using the weather API",
   "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
     "bootstrap": "^4.4.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.0"
+  },
+  "devDependencies": {
     "css-loader": "^3.2.1",
     "eslint": "^6.7.2",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
     "file-loader": "^5.0.2",
-    "jquery": "^3.4.1",
-    "popper.js": "^1.16.0",
     "style-loader": "^1.0.1",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"
