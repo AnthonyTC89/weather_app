@@ -1,5 +1,4 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable */
 import { setupHeader, setupMain, setupFooter } from './dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style/style.css';
