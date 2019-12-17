@@ -45,19 +45,23 @@ function showWeather(w) {
 
   const weatherSection = document.querySelector('#weather-section');
   weatherSection.innerHTML = `
+    <label class="grades">Fahrenheit</label>
     <label class="switch">
       <input type="checkbox" checked>
       <span class="slider round"></span>
     </label>
-    <div class="min-temp col-3">min: ${tempMinC}°C</div>
-    <div class="main-temp col-6">${tempC}°C</div>
-    <div class="max-temp col-3">max: ${tempMaxC}°C</div>
-    <div class="desc-temp col-12">${wDesc}</div>
-    <div class="humidity col-4">Humidity: ${humidity}</div>
-    <picture class="image col-4">
-      <img src="${wImg}">
-    </picture>
-    <div class="pressure col-4">Pressure: ${pressure}</div>
+    <label class="grades">Celcius</label>
+    <div class="weather-info row">
+      <div class="min-temp col-3">min: ${tempMinC}°C</div>
+      <div class="main-temp col-6">${tempC}°C</div>
+      <div class="max-temp col-3">max: ${tempMaxC}°C</div>
+      <div class="desc-temp col-12">${wDesc}</div>
+      <div class="humidity col-4">Humidity: ${humidity}</div>
+      <picture class="image col-4">
+        <img src="${wImg}">
+      </picture>
+      <div class="pressure col-4">Pressure: ${pressure}</div>
+    </div>
   `;
   const id = wIcon.slice(0, 2);
   document.body.style.backgroundImage = `url('./images/${id}.gif')`;
@@ -118,7 +122,7 @@ const setupMain = async () => {
 
   const weatherSection = document.createElement('section');
   weatherSection.setAttribute('id', 'weather-section');
-  weatherSection.classList.add('weather-section', 'row');
+  weatherSection.classList.add('weather-section');
 
   const picture = document.createElement('picture');
   picture.setAttribute('id', 'loading-icon');
