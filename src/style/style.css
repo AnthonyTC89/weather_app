@@ -7,7 +7,7 @@ body{
   text-align:center;
 }
 .main-header{
-  color: rgb(85, 85, 231);
+  color: #3f90db;
 }
 .input-section{
   display: flex;
@@ -19,7 +19,7 @@ body{
 }
 
 .celcius {
-  background: #3f90db80;
+  background: rgba(63, 144, 219, 0.502);
 }
 
 .fahrenheit {

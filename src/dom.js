@@ -35,16 +35,27 @@ const changeGrades = (grade, min, temp, max) => {
   document.querySelector('.max-temp').textContent = `max: ${max}°${grade}`;
 };
 
-const changeBackgroud = (celcius) => {
+const changeBackground = (celcius) => {
   const weatherInfo = document.querySelector('.weather-info');
+  const submitBtn = document.querySelector('.btn');
   if (celcius) {
     weatherInfo.classList.remove('fahrenheit');
     weatherInfo.classList.add('celcius');
+
+    submitBtn.classList.remove('btn-danger');
+    submitBtn.classList.add('btn-info');
+
+    document.querySelector('.main-header').style.color = '#3f90db';
   } else {
     weatherInfo.classList.remove('celcius');
     weatherInfo.classList.add('fahrenheit');
+
+    submitBtn.classList.remove('btn-info');
+    submitBtn.classList.add('btn-danger');
+
+    document.querySelector('.main-header').style.color = '#de6464';
   }
-}
+};
 
 function showWeather(w) {
   hiddenLoading();
@@ -91,10 +102,10 @@ function showWeather(w) {
   toggleBtn.addEventListener('change', () => {
     if (toggleBtn.checked) {
       changeGrades('C', tempMinC, tempC, tempMaxC);
-      changeBackgroud(toggleBtn.checked);
+      changeBackground(toggleBtn.checked);
     } else {
       changeGrades('F', tempMinF, tempF, tempMaxF);
-      changeBackgroud(toggleBtn.checked);
+      changeBackground(toggleBtn.checked);
     }
   });
 }
