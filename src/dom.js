@@ -25,8 +25,14 @@ function hiddenLoading() {
 }
 
 function clearWeatherInfo() {
+  const submitBtn = document.querySelector('.btn');
+  submitBtn.classList.remove('btn-danger');
+  submitBtn.classList.add('btn-info');
+
   document.querySelector('#weather-section').innerHTML = '';
   document.body.style.backgroundImage = '';
+
+  document.querySelector('.main-header').style.color = '#3f90db';
 }
 
 const changeGrades = (grade, min, temp, max) => {
