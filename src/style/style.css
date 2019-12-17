@@ -1,3 +1,9 @@
+body{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .main-header{
   color: rgb(85, 85, 231);
 }

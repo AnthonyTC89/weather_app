@@ -23,10 +23,12 @@ function hiddenLoading() {
   const picture = document.querySelector('#loading-icon');
   picture.classList.add('hidden');
 }
+
 function clearWeatherInfo() {
-  const weatherSection = document.querySelector('#weather-section');
-  weatherSection.innerHTML = '';
+  document.querySelector('#weather-section').innerHTML = '';
+  document.body.style.backgroundImage = '';
 }
+
 function showWeather(w) {
   hiddenLoading();
   const wDesc = w.weather[0].description;
@@ -53,11 +55,13 @@ function showWeather(w) {
     </picture>
     <div class="pressure col-4">Pressure: ${pressure}</div>
   `;
+  const id = wIcon.slice(0, 2);
+  document.body.style.backgroundImage = `url('./images/${id}.gif')`;
 }
 
 const setupWeather = async (city) => {
   clearWeatherInfo();
-  if (city === '') {
+  if (city === '' || city.trim() === '' || city.length === 0) {
     hiddenLoading();
     return showMessage('Please, Enter a City');
   }
