@@ -45,6 +45,10 @@ function showWeather(w) {
 
   const weatherSection = document.querySelector('#weather-section');
   weatherSection.innerHTML = `
+    <label class="switch">
+      <input type="checkbox" checked>
+      <span class="slider round"></span>
+    </label>
     <div class="min-temp col-3">min: ${tempMinC}°C</div>
     <div class="main-temp col-6">${tempC}°C</div>
     <div class="max-temp col-3">max: ${tempMaxC}°C</div>
@@ -102,6 +106,15 @@ const setupMain = async () => {
   submitBtn.addEventListener('click', () => setupWeather(inputCity.value));
   inputSection.appendChild(inputCity);
   inputSection.appendChild(submitBtn);
+
+  inputCity.addEventListener('keyup', (event) => {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+      // Cancel the default action, if needed
+      event.preventDefault();
+      submitBtn.click();
+    }
+  });
 
   const weatherSection = document.createElement('section');
   weatherSection.setAttribute('id', 'weather-section');
