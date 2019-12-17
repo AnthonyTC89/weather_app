@@ -29,6 +29,23 @@ function clearWeatherInfo() {
   document.body.style.backgroundImage = '';
 }
 
+const changeGrades = (grade, min, temp, max) => {
+  document.querySelector('.min-temp').textContent = `min: ${min}°${grade}`;
+  document.querySelector('.main-temp').textContent = `${temp}°${grade}`;
+  document.querySelector('.max-temp').textContent = `max: ${max}°${grade}`;
+};
+
+const changeBackgroud = (celcius) => {
+  const weatherInfo = document.querySelector('.weather-info');
+  if (celcius) {
+    weatherInfo.classList.remove('fahrenheit');
+    weatherInfo.classList.add('celcius');
+  } else {
+    weatherInfo.classList.remove('celcius');
+    weatherInfo.classList.add('fahrenheit');
+  }
+}
+
 function showWeather(w) {
   hiddenLoading();
   const wDesc = w.weather[0].description;
@@ -36,22 +53,26 @@ function showWeather(w) {
   const wImg = `http://openweathermap.org/img/wn/${wIcon}@2x.png`;
   const humidity = `${w.main.humidity} %`;
   const pressure = `${w.main.pressure} hPa`;
+
+  // Grades in Celcius
   const tempC = Math.round(parseFloat(w.main.temp) - 273.15);
   const tempMaxC = Math.round(parseFloat(w.main.temp_max) - 273.15);
   const tempMinC = Math.round(parseFloat(w.main.temp_min) - 273.15);
 
-  // const celcius = Math.round(parseFloat(w.main.temp)-273.15);
-  // const fahrenheit = Math.round(((parseFloat(w.main.temp)-273.15)*1.8)+32);
+  // Grades in Fahrenheit
+  const tempF = Math.round(((parseFloat(w.main.temp) - 273.15) * 1.8) + 32);
+  const tempMaxF = Math.round(((parseFloat(w.main.temp_max) - 273.15) * 1.8) + 32);
+  const tempMinF = Math.round(((parseFloat(w.main.temp_min) - 273.15) * 1.8) + 32);
 
   const weatherSection = document.querySelector('#weather-section');
   weatherSection.innerHTML = `
     <label class="grades">Fahrenheit</label>
     <label class="switch">
-      <input type="checkbox" checked>
+      <input id="toggle-btn" type="checkbox" checked>
       <span class="slider round"></span>
     </label>
     <label class="grades">Celcius</label>
-    <div class="weather-info row">
+    <div class="weather-info row celcius">
       <div class="min-temp col-3">min: ${tempMinC}°C</div>
       <div class="main-temp col-6">${tempC}°C</div>
       <div class="max-temp col-3">max: ${tempMaxC}°C</div>
@@ -65,7 +86,19 @@ function showWeather(w) {
   `;
   const id = wIcon.slice(0, 2);
   document.body.style.backgroundImage = `url('./images/${id}.gif')`;
+
+  const toggleBtn = document.querySelector('#toggle-btn');
+  toggleBtn.addEventListener('change', () => {
+    if (toggleBtn.checked) {
+      changeGrades('C', tempMinC, tempC, tempMaxC);
+      changeBackgroud(toggleBtn.checked);
+    } else {
+      changeGrades('F', tempMinF, tempF, tempMaxF);
+      changeBackgroud(toggleBtn.checked);
+    }
+  });
 }
+
 
 const setupWeather = async (city) => {
   clearWeatherInfo();

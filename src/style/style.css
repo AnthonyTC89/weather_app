@@ -17,8 +17,15 @@ body{
   color: white;
   font-weight: bold;
 }
+
+.celcius {
+  background: #3f90db80;
+}
+
+.fahrenheit {
+  background: #de646480;
+}
 .weather-info{
-  background:  rgba(63, 144, 219, 0.5);
   max-width: 30rem;
   display: flex;
   justify-content: center;
@@ -85,7 +92,7 @@ body{
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgb(222, 100, 100);
+  background-color: #de646480;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -103,12 +110,12 @@ body{
 }
 
 input:checked + .slider {
-  background-color: rgba(63, 144, 219, 0.5);
+  background-color: #3f90db80;
 }
 
-/* input:focus + .slider {
+input:focus + .slider {
   box-shadow: 0 0 1px #2196F3;
-} */
+}
 
 input:checked + .slider:before {
   -webkit-transform: translateX(26px);
