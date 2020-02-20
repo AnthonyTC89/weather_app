@@ -1,42 +1,55 @@
-# weather_app
-## About The Project
+<p align="center">
+  <h1 align="center">WEATHER APP</h1>
 
-Creating a weather forecast site using the weather API from [openweather](https://openweathermap.org/api)
-More details: https://www.theodinproject.com/courses/javascript/lessons/weather-app
+  <p align="center">
+    Project Create with Javascript and APIs.
+    <br>
+    <br>
+    <a href="https://anthonytc89.github.io/weather_app" target="_blank">Live Demo</a>
+    .
+    <a href="https://github.com/AnthonyTC89/weather_app/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/AnthonyTC89/weather_app/issues">Request Feature</a>
+  </p>
+  <br>
+</p>
 
-### Built With
+![Screenshot](/screenshots/01.png)
 
-* HTML
-* CSS
-* JavaScript
+<!-- TABLE OF CONTENTS -->
+## Table of Contents
 
-## Getting Started
+* [About the Project](#about-the-project)
+* [Main Features](#main-features)
+* [Built With](#built-with)
+* [Installation](#installation)
+* [Contact](#Contact)
 
-To get a local copy up and running follow these simple steps.
+<!-- ABOUT THE PROJECT -->
+### About The Project
 
-### Installation
- 
-1. Clone the repo `https://github.com/AnthonyTC89/weather_app`
-2. Run `npm install`
-2. Open the file 'dist/index.html' in a browser.
+This project is part of the course [The Odin Project](https://www.theodinproject.com/courses/javascript/lessons/weather-app). The goal of the project is learn about JSON data from an API and manipulate the information according some events.
 
-## Main Features
+### Main Features
 
 * Type a city from the world to get the information of the weather.
 * The default grade is Celcius, there is a toggle button to the the grades to Fahrenheit.
 * The style will change according to the data received.  
 
-## Authors
+### Built With
 
-* [Anthony Tapia](https://github.com/AnthonyTC89)
+* [HTML](https://www.w3.org/html/)
+* [CSS](https://www.w3.org/Style/CSS/)
+* [Bootstrap](https://getbootstrap.com/)
+* [JavaScript](https://www.javascript.com/)
+* [Open Weather API](https://openweathermap.org/api)
 
+### Installation
 
-## Contributing
+  1. Clone the repository [weather_app](https://github.com/AnthonyTC89/weather_app)
+  2. Run `npm install`
+  3. Open the file 'dist/index.html' in a browser.
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+### Contact
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+* **[Anthony Tapia Cossio](https://github.com/AnthonyTC89) - [Linkedin](linkedin.com/in/anthony-tapia-cossio) - [Twitter](https://twitter.com/ptonypTC) - [Portfolio](https://portfolio-anthony.herokuapp.com/)**

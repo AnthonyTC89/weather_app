@@ -9,7 +9,7 @@ async function checkStatus(status) {
 
 const getWeatherInfo = async (city) => {
   const API_KEY = 'c5cc87bec56b87798fd3626cd4001874';
-  const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${API_KEY}`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${API_KEY}`;
   const res = await fetch(url, { mode: 'cors' });
   const valid = await checkStatus(res.status);
   if (valid) {
