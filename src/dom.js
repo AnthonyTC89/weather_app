@@ -67,7 +67,7 @@ function showWeather(w) {
   hiddenLoading();
   const wDesc = w.weather[0].description;
   const wIcon = w.weather[0].icon;
-  const wImg = `http://openweathermap.org/img/wn/${wIcon}@2x.png`;
+  const wImg = `https://openweathermap.org/img/wn/${wIcon}@2x.png`;
   const humidity = `${w.main.humidity} %`;
   const pressure = `${w.main.pressure} hPa`;
 
