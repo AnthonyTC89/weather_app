@@ -14,7 +14,7 @@
   <br>
 </p>
 
-![Screenshot](/screenshots/01.png)
+  ![Screenshot](/screenshots/01.png)
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
